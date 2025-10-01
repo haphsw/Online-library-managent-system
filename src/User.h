@@ -6,17 +6,16 @@ class User {
 private:
     int id;                      
     string name;                   
-    vector<string> borrowedIsbns; 
+    vector<string> borrowBooks; 
 
 public:
     User(int id, string name);
 
-   // Getters
     int getId();
     string getName();
-    vector<string> getBorrowedIsbns();
+    vector<string> getborrowBooks();
 
-    // Setters
+
     void setName(string n);
   
     bool hasBorrowed(const string &isbn);      
