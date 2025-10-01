@@ -18,6 +18,23 @@ Design Choices include:
   Encapsulation: Each entity is represented as a separate class with private data and public                        methods.
   
   Testing: A simple test is included to verify system behavior. 
+
+Test Result:
+Borrowed books after borrowing:
+Mey: C++ Guide, 
+Haph: Python Basics, 
+Ayzal: Java Fundamentals, 
+
+After trying to borrow already borrowed books:
+Mey: C++ Guide, 
+Haph: Python Basics, 
+
+After returning some books:
+Mey: 
+Haph: 
+Ayzal after returning unborrowed book: Java Fundamentals, 
+Found book: OOP
+Book not found.
   
 How to Compile and Run
 
