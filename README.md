@@ -9,17 +9,18 @@ The project has 3 classes; Book,User and Library.
   
   User: Represents a library user who can borrow and return books.
   
-  Library: Manages the collection of books and users, with methods to add,remove,search,borrow and              return book.
+  Library: Manages the collection of books and users, with methods to add,remove,search,borrow and return book.
   
 The system also includes test cases to check the correctness of each method.
 
 Design Choices include:
 
-  Encapsulation: Each entity is represented as a separate class with private data and public                        methods.
+  Encapsulation: Each entity is represented as a separate class with private data and public methods.
   
   Testing: A simple test is included to verify system behavior. 
 
 Test Result:
+
 Borrowed books after borrowing:
 Mey: C++ Guide, 
 Haph: Python Basics, 
