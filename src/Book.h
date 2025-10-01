@@ -10,7 +10,7 @@ public:
   int totalCopies;
   int availableCopies;
 
-  Book(string t, string a, string i, int year, int copies);
+  Book(string t, string a, string i, int year, int copies, int available);
 
   bool borrowBook();
   bool returnBook();
