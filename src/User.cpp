@@ -1,31 +1,44 @@
 #include "User.h"
 
-User::User(int i, string n) {
-    id = i;
-    name = n;
+User::User(int id, string name) {
+    this->id = id;
+    this->name = name;
+
 }
 
 int User::getId() {
     return id;
 }
-
 string User::getName() {
-    return name;
+    return name; 
+}
+vector<string> User::getBorrowedBooks() { 
+    return borrowedBooks; 
+}
+void User::setName(string n) {
+    name = n;
 }
 
-void User::borrowBook(string isbn) {
-    borrowedBooks.push_back(isbn);
-}
-
-void User::returnBook(string isbn) {
-    for (int k = 0; k < borrowedBooks.size(); k++) {
-        if (borrowedBooks[k] == isbn) {
-            borrowedBooks.erase(borrowedBooks.begin() + k);
-            break;
+bool User::hasBorrowed(string bookTitle) {
+    for (int i = 0; i < borrowedBooks.size(); i++) {
+        if (borrowedBooks[i] == bookTitle) {
+            return true;
         }
+    }
+    return false;
+}
+
+void User::borrowBook(string bookTitle) {
+    if (!hasBorrowed(bookTitle)) {
+        borrowedBooks.push_back(bookTitle);
     }
 }
 
-vector<string> User::getBorrowedBooks() {
-    return borrowedBooks;
+void User::returnBook(string bookTitle) {
+    for (int i = 0; i < borrowedBooks.size(); i++) {
+        if (borrowedBooks[i] == bookTitle) {
+            borrowedBooks.erase(borrowedBooks.begin() + i);
+            break;
+        }
+    }
 }
